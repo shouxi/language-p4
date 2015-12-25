@@ -1,0 +1,66 @@
+'scopeName': 'source.p4'
+'name': 'P4'
+'fileTypes': [
+    'p4'
+    'P4'
+]
+'patterns': [
+    {
+        'match': '\\b[0-9]+\\b'
+        'name': 'constant.numeric.integer.decimal.python'
+    }
+    {
+        'match': '\\b(?i:(0[xX][0-9a-fA-F]+))\\b'
+        'constant.numeric.integer.hexadecimal.python'
+    }
+    {
+        #'comment': 'keywords that delimit flow conditionals'
+        'name': 'keyword.control.conditional.python'
+        'match': '\\b(if|else)\\b'
+    }
+    {
+        #'comment': 'keyword operators that evaluate to True or False'
+        'match': '\\b(and|not|or)\\b'
+        'name': 'keyword.operator.logical.python'
+    }
+    {
+        #'comment': 'keywords that haven\'t fit into other groups (yet).'
+        'match': '\\b(valid)\\b'
+        'name': 'keyword.other.python'
+    }
+    {
+        'match': '<\\=|>\\=|\\=\\=|<|>|\\!\\='
+        'name': 'keyword.operator.comparison.python'
+    }
+    {
+        'match': '\\+\\=|-\\=|\\*\\=|/\\=|//\\=|%\\=|&\\=|\\|\\=|\\^\\=|>>\\=|<<\\=|\\*\\*\\='
+        'name': 'keyword.operator.assignment.augmented.python'
+    }
+    {
+        'match': '\\+|\\-|\\*|\\*\\*|/|//|%|<<|>>|&|\\||\\^|~'
+        'name': 'keyword.operator.arithmetic.python'
+    }
+    {
+        'match': '\\='
+        'name': 'keyword.operator.assignment.python'
+    }
+    {
+        # 'comment': 'builtin_functions':
+        'match': '\\b(apply|extract|select)\\b'
+        'name': 'keyword.operator.assignment.python'#'storage.type.function.python'
+    }
+    {
+        # 'builtin_types':
+        'match': '\\b(table|control|parser|header_type|header|metadata|action|register)\\b'
+        'name': 'support.type.python'
+    }
+    #apply|current|default|else|hit|if|last|latest|parse_error|payload|select|switch|return)
+    {
+        'match': '\\b(current|last|latest|payload)\\b'
+        'name': 'support.type.python'
+    }
+    {
+        'match': '(//.*)\\n'
+        'name': 'comment.line.number-sign.python'
+    }
+]

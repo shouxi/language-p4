@@ -1,0 +1,11 @@
+{
+  "name": "language-p4",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for P4",
+  "repository": "https://github.com/shouxi/language-p4",
+  "license": "MIT",
+    "engines": {
+        "atom": "*",
+        "node": "*"
+  }
+}
